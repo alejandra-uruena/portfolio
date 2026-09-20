@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- TEMPORARY: keeps search engines out while the content is still in placeholders.
+     DELETE this line once the About copy and the case studies are written. -->
+<meta name="robots" content="noindex">
+
+<title>Guitar Hero III — UI Redesign · Aleja Urueña</title>
+<meta name="description" content="A full interface system for Guitar Hero III: loading screen, main menu, pause menu and HUD. Self-directed conceptual exercise.">
+<meta property="og:title" content="Guitar Hero III — UI Redesign">
+<meta property="og:description" content="Modernising navigation without losing the rock identity that made the game iconic.">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>▲</text></svg>">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="../index.html">Aleja&nbsp;Urueña</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="../index.html#work">Work</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <div class="lang-switch" hidden>
+        <span aria-current="true">EN</span>
+        <a href="../es/projects/guitar-hero-iii.html" hreflang="es">ES</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+<header class="project-header">
+  <div class="wrap">
+    <a class="back-link" href="../index.html#work">← Back to work</a>
+    <h1 style="margin-top:1rem;">Guitar Hero III — UI Redesign</h1>
+    <p class="pitch" style="font-size:1.1rem;color:var(--text-dim);max-width:60ch;">
+      Modernising navigation and interaction without losing the rock identity
+      that made the original iconic.
+    </p>
+
+    <div class="project-meta">
+      <div><span class="k">Contribution</span><span class="v">Concept &amp; UI Design</span></div>
+      <div><span class="k">Type</span><span class="v">Self-directed</span></div>
+      <div><span class="k">Tools</span><span class="v">Figma</span></div>
+      <div><span class="k">Deliverable</span><span class="v">Interactive prototype</span></div>
+    </div>
+
+    <p class="disclaimer">
+      Independent conceptual exercise. Non-commercial, with no affiliation to or endorsement by
+      the rights holders of the brands referenced.
+    </p>
+  </div>
+</header>
+
+<section style="border-top:none;padding-top:0;">
+  <div class="wrap">
+    <div class="prose">
+
+      <h2>Context</h2>
+      <p>
+        Guitar Hero III is a rhythm game whose interface was built for a console generation with
+        different conventions and different expectations of feedback. The visual identity still
+        holds up. The interaction layer around it does not.
+      </p>
+      <p>
+        I took it as a self-directed exercise in a constraint I find genuinely interesting:
+        modernise an interface without flattening the personality that made it memorable in the
+        first place. Most "redesigns" solve legibility by erasing character. I wanted the opposite.
+      </p>
+
+      <h2>Problem</h2>
+      <p>
+        I audited the original interface and isolated four concrete points of friction:
+      </p>
+      <ul>
+        <li><strong>The loading screen is static.</strong> Dead time that builds no anticipation for what follows.</li>
+        <li><strong>The main menu has weak visual hierarchy.</strong> Nothing signals which option matters most, so every option costs the same to evaluate.</li>
+        <li><strong>The pause menu presents unprioritised information</strong>, slowing down access at exactly the moment the player is mid-song and impatient.</li>
+        <li><strong>The HUD is overloaded</strong>, competing for attention with the one thing that actually matters: the note track.</li>
+      </ul>
+      <p>
+        That last one is the real problem. In a rhythm game, every pixel that pulls the eye away
+        from the note track is a design failure with a measurable cost in player performance.
+      </p>
+
+      <h2>Process</h2>
+
+      <h3>Visual research</h3>
+      <p>
+        The moodboard drew on concert posters, and on the typography and palettes of rock bands —
+        Motörhead, Iron Maiden — plus graphic design from punk and garage flyers. The intent was
+        to anchor the system in an authentic visual language of rock rather than a generic
+        video-game aesthetic.
+      </p>
+      <p class="disclaimer">
+        Process note: ambient backgrounds in the moodboard were generated with AI (Gemini) as
+        atmospheric reference only. The UI system, hierarchy and interaction design are my own work.
+      </p>
+
+      <h3>Structure before surface</h3>
+      <p>
+        Hand-drawn wireframes settled the structure before any visual decision was made: main
+        menu hierarchy, HUD information grouping (note count, rock meter, song progress) and the
+        pause menu layout. Deciding hierarchy while already looking at colour is how you end up
+        rationalising an aesthetic choice as a functional one.
+      </p>
+
+      <figure>
+        <div class="figure-empty">[ wireframes — 1600×900 ]</div>
+        <figcaption>Hand wireframes: main menu and HUD grouping.</figcaption>
+      </figure>
+
+      <h2>Design decisions</h2>
+
+      <h3>Main menu</h3>
+      <p>
+        Simplified, with hierarchy carried by colour and by typography borrowed from concert
+        posters. Key options are identifiable at a glance rather than after reading the full list.
+      </p>
+
+      <h3>Loading screen</h3>
+      <p>
+        Rebuilt to create anticipation through animation and classic rock visual references,
+        replacing the original's dead air. Loading time is unavoidable; spending it on nothing is not.
+      </p>
+
+      <h3>Pause menu</h3>
+      <p>
+        Structured after guitar tablature — a form the audience already reads fluently. Clear
+        hierarchy so pausing doesn't break immersion, and so returning to play is the fastest
+        available action.
+      </p>
+
+      <h3>HUD</h3>
+      <p>
+        Stripped to essentials. Note count and rock meter grouped to one side so they occupy a
+        single glance rather than two; a song progress bar added to give temporal context without
+        adding clutter. Grouping related information is what buys the screen space back.
+      </p>
+
+      <figure>
+        <div class="figure-empty">[ before / after — HUD — 1600×900 ]</div>
+        <figcaption>HUD: original versus redesign, at the same moment in a song.</figcaption>
+      </figure>
+
+      <h2>Result</h2>
+      <p>
+        A complete, coherent UI system across four screens — loading, main menu, pause and HUD —
+        navigable as a functional prototype in Figma.
+      </p>
+
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Open the prototype</a>
+      </div>
+
+      <h2>What I learned</h2>
+      <p>
+        <em>[To be written by Aleja before publishing. The honest version: what would you do
+        differently today, with the criterion you have now? Name something specific. A designer
+        who can critique their own work is more hireable than one who can only sell it — and
+        this is the section interviewers read most carefully.]</em>
+      </p>
+
+      <nav class="case-nav" aria-label="Continue reading">
+        <a class="btn btn-primary" href="kungata.html">Next project → Kungatá</a>
+        <a class="btn" href="../index.html?v=product#work">Go to Product &amp; Digital</a>
+      </nav>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Aleja Urueña</span>
+    <span><a href="../index.html">Back to home</a></span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
