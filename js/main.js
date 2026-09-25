@@ -24,7 +24,7 @@
   };
 
   function select(vertical, pushState) {
-    if (!panels[vertical]) vertical = 'games';
+    if (!panels[vertical]) vertical = 'product';
 
     tabs.forEach(function (tab) {
       var on = tab.dataset.vertical === vertical;
@@ -38,7 +38,7 @@
 
     if (pushState && window.history && history.replaceState) {
       var url = new URL(window.location.href);
-      if (vertical === 'games') url.searchParams.delete('v');
+      if (vertical === 'product') url.searchParams.delete('v');
       else url.searchParams.set('v', vertical);
       history.replaceState(null, '', url.toString() + window.location.hash);
     }
@@ -61,9 +61,10 @@
       });
     });
 
-    /* Open on the vertical named in the URL; Game UI/UX otherwise. */
+    /* Open on the vertical named in the URL; Digital Product otherwise.
+       ?v=games is the link to send when applying to games roles. */
     var requested = new URLSearchParams(window.location.search).get('v');
-    select(requested === 'product' ? 'product' : 'games', false);
+    select(requested === 'games' ? 'games' : 'product', false);
   }
 
   /* ---------------------------------------------------------------

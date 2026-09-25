@@ -3,15 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- TEMPORARY: keeps search engines out while the content is still in placeholders.
-     DELETE this line once the About copy and the case studies are written. -->
+<!-- TEMPORARY: keeps search engines out while the case studies are still being written.
+     DELETE this line once the project pages are done. -->
 <meta name="robots" content="noindex">
 
-<title>Aleja Urueña — UI/UX Technical Designer</title>
-<meta name="description" content="UI/UX Designer with a technical background in games QA. Interface systems for complex interactive experiences.">
+<!-- The h1 is a greeting, so the descriptive line lives here, where search
+     results and link previews read it. -->
+<title>Alejandra Urueña — Technical UX/UI Designer</title>
+<meta name="description" content="Technical Designer specializing in UX/UI for digital media and games. User-centered design, prototyping and storytelling — designed and built.">
 
-<meta property="og:title" content="Aleja Urueña — UI/UX Technical Designer">
-<meta property="og:description" content="UI/UX Designer with a technical background in games QA. Interface systems for complex interactive experiences.">
+<meta property="og:title" content="Alejandra Urueña — Technical UX/UI Designer">
+<meta property="og:description" content="Technical Designer specializing in UX/UI for digital media and games.">
 <meta property="og:type" content="website">
 <!-- <meta property="og:image" content="https://alejandra-uruena.github.io/portfolio/assets/og-image.png"> -->
 
@@ -24,15 +26,19 @@
 
 <nav class="nav">
   <div class="nav-inner">
-    <a class="nav-brand" href="index.html">Aleja&nbsp;Urueña</a>
+    <a class="nav-brand" href="index.html">
+      <span class="nav-name">Alejandra&nbsp;Urueña</span>
+      <span class="nav-role">Technical UX/UI Designer</span>
+    </a>
     <div class="nav-right">
       <ul class="nav-links">
         <li><a href="#work">Work</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
+        <!-- ART goes here once the section exists. A menu item that leads
+             nowhere is worse than no menu item. -->
       </ul>
-      <!-- Language switch. Unhide once /es/ exists; the ES entry becomes a link.
-           It lives in the nav (not the hero) so it is reachable from every page. -->
+      <!-- Language switch. Unhide once /es/ exists; the ES entry becomes a link. -->
       <div class="lang-switch" hidden>
         <span aria-current="true">EN</span>
         <a href="es/index.html" hreflang="es">ES</a>
@@ -46,33 +52,29 @@
 <!-- ============ HERO ============ -->
 <header class="hero">
   <div class="wrap">
-    <p class="eyebrow">UI/UX Technical Designer</p>
-
-    <h1>Interface systems for complex interactive experiences.</h1>
+    <h1>Hi there!</h1>
 
     <p class="pitch">
-      I design game and product interfaces — HUDs, menus, ability feedback, decision flows —
-      and I build them, not just specify them.
+      I'm Ale, Technical Designer specializing in UX/UI for digital media and games.
+      I love designing experiences that connect with people, and bringing them to life
+      with development.
     </p>
 
     <p class="bridge">
-      I come from games QA, which is where I learned what actually breaks a player's experience.
-      That's the criterion I design with now.
+      My specialties include user-centered design, prototyping, and storytelling.
     </p>
 
-    <!-- TOOL ROW — icons are CSS masks filled with currentColor, so colour is
-         controlled entirely from the stylesheet. Every tool keeps its visible
-         name: an icon alone says nothing to a screen reader, or to anyone who
-         doesn't recognise the mark. -->
+    <!-- Icons are CSS masks filled with currentColor, so colour is controlled
+         entirely from the stylesheet. HTML/CSS has no brand mark, so it rides
+         as a text-only chip. -->
     <div class="toolbar">
       <p class="toolbar-label">Tools</p>
       <ul class="tool-list">
         <li class="tool"><i class="i-figma" aria-hidden="true"></i>Figma</li>
-        <li class="tool"><i class="i-unreal" aria-hidden="true"></i>Unreal Engine</li>
         <li class="tool"><i class="i-unity" aria-hidden="true"></i>Unity</li>
-        <li class="tool"><i class="i-visual-studio" aria-hidden="true"></i>Visual Studio</li>
+        <li class="tool"><i class="i-unreal" aria-hidden="true"></i>Unreal Engine</li>
+        <li class="tool">HTML/CSS</li>
         <li class="tool"><i class="i-adobe" aria-hidden="true"></i>Adobe</li>
-        <li class="tool"><i class="i-atlassian" aria-hidden="true"></i>Atlassian</li>
       </ul>
     </div>
 
@@ -87,145 +89,48 @@
 <section id="work">
   <div class="wrap">
     <p class="section-label">Work</p>
-    <h2 class="section-title">Selected projects</h2>
-    <p class="section-intro">
-      Every card states the scope of my contribution up front — design, implementation or visual
-      work are different skills, and conflating them helps nobody.
-    </p>
+    <h2 class="section-title">Projects</h2>
+    <p class="section-intro">Here's a brief view of my work :)</p>
 
     <!-- Vertical filter. Swaps the list in place: no reload, no scroll jump.
-         State is mirrored in the URL (?v=product) so a link can open on either one. -->
+         Digital Product is the default; index.html?v=games opens on Game UI,
+         which is the link to send when applying to games roles. -->
     <div class="verticals" role="tablist" aria-label="Project verticals">
-      <button class="vertical-btn" role="tab" id="tab-games"
-              aria-controls="panel-games" aria-selected="true" data-vertical="games">
-        Game UI/UX
-      </button>
       <button class="vertical-btn" role="tab" id="tab-product"
-              aria-controls="panel-product" aria-selected="false" data-vertical="product">
-        Product &amp; Digital
+              aria-controls="panel-product" aria-selected="true" data-vertical="product">
+        Digital Product
+      </button>
+      <button class="vertical-btn" role="tab" id="tab-games"
+              aria-controls="panel-games" aria-selected="false" data-vertical="games">
+        Game UI
       </button>
     </div>
 
-    <!-- ---------- GAME UI/UX ---------- -->
-    <div class="project-list" id="panel-games" role="tabpanel" aria-labelledby="tab-games">
+    <!-- ---------- DIGITAL PRODUCT ---------- -->
+    <div class="project-list" id="panel-product" role="tabpanel" aria-labelledby="tab-product">
 
-      <a class="project-card" href="projects/guitar-hero-iii.html">
+      <a class="project-card" href="projects/necronomicon.html">
+        <div class="project-thumb">
+          <img src="assets/thumbs/necronomicon.jpg" alt="Necronomicón character sheet and creature screens" loading="lazy" decoding="async">
+          <video class="thumb-motion" muted loop playsinline preload="none"
+                 poster="assets/thumbs/necronomicon.jpg" aria-hidden="true">
+            <source src="assets/thumbs/necronomicon.webm" type="video/webm">
+            <source src="assets/thumbs/necronomicon.mp4" type="video/mp4">
+          </video>
+          <span class="thumb-motion-hint">Hover</span>
+        </div>
         <div class="project-text">
-          <h3>Guitar Hero III — UI Redesign</h3>
-          <p>A full interface system rebuilt around one question: how do you modernise navigation without losing the rock identity that made the game iconic?</p>
+          <h3>Necronomicón</h3>
+          <p>For this lovecraftian-inspired app, I designed and prototyped UI to solve pain points in table top RPG players' journey.</p>
           <div class="tags">
-            <span class="tag tag-role">Concept &amp; UI Design</span>
+            <span class="tag tag-role">Solo Project</span>
             <span class="tag tag-tool">Figma</span>
-            <span class="tag">Self-directed</span>
+            <span class="tag tag-tool">Paper prototyping</span>
           </div>
-        </div>
-        <div class="project-thumb">
-          <img src="assets/thumbs/guitar-hero-iii.jpg" alt="Redesigned Guitar Hero III main menu" loading="lazy" decoding="async">
-          <video class="thumb-motion" muted loop playsinline preload="none"
-                 poster="assets/thumbs/guitar-hero-iii.jpg" aria-hidden="true">
-            <source src="assets/thumbs/guitar-hero-iii.webm" type="video/webm">
-            <source src="assets/thumbs/guitar-hero-iii.mp4" type="video/mp4">
-          </video>
-          <span class="thumb-motion-hint">Hover</span>
-        </div>
-      </a>
-
-      <a class="project-card" href="projects/kungata.html">
-        <div class="project-text">
-          <h3>Kungatá</h3>
-          <p>Enemy AI, UI, dialogue system and object interaction, implemented in Unity. Evidence that I can build the systems I design, not only hand them off.</p>
-          <div class="tags">
-            <span class="tag tag-role">Implementation</span>
-            <span class="tag tag-tool">Unity</span>
-            <span class="tag tag-tool">C#</span>
-            <span class="tag">Team project</span>
-          </div>
-        </div>
-        <div class="project-thumb">
-          <img src="assets/thumbs/kungata.jpg" alt="Kungatá title sequence" loading="lazy" decoding="async">
-          <video class="thumb-motion" muted loop playsinline preload="none"
-                 poster="assets/thumbs/kungata.jpg" aria-hidden="true">
-            <source src="assets/thumbs/kungata.webm" type="video/webm">
-            <source src="assets/thumbs/kungata.mp4" type="video/mp4">
-          </video>
-          <span class="thumb-motion-hint">Hover</span>
-        </div>
-      </a>
-
-      <a class="project-card" href="projects/el-ultimo-aliento.html">
-        <div class="project-text">
-          <h3>El último aliento</h3>
-          <p>Interface and narrative writing for a game jam entry, built under a 48-hour constraint. Illustration by a teammate.</p>
-          <div class="tags">
-            <span class="tag tag-role">UI Design &amp; Writing</span>
-            <span class="tag">Game Jam · Globant 2025</span>
-            <span class="tag">Team project</span>
-          </div>
-        </div>
-        <div class="project-thumb">
-          <img src="assets/thumbs/el-ultimo-aliento.jpg" alt="El último aliento title card" loading="lazy" decoding="async">
-          <video class="thumb-motion" muted loop playsinline preload="none"
-                 poster="assets/thumbs/el-ultimo-aliento.jpg" aria-hidden="true">
-            <source src="assets/thumbs/el-ultimo-aliento.webm" type="video/webm">
-            <source src="assets/thumbs/el-ultimo-aliento.mp4" type="video/mp4">
-          </video>
-          <span class="thumb-motion-hint">Hover</span>
-        </div>
-      </a>
-
-      <!-- Reserved slot. Signals direction without claiming finished work.
-           Not a link until there is something to link to. -->
-      <div class="project-card is-reserved">
-        <div class="project-text">
-          <h3>Beat the Evil</h3>
-          <p>In development. An Unreal Engine piece focused on UMG and Common UI — ability HUD, state feedback and menu architecture, designed and implemented end to end.</p>
-          <div class="tags">
-            <span class="tag tag-role">Design &amp; Implementation</span>
-            <span class="tag tag-tool">Unreal Engine</span>
-            <span class="tag">In progress</span>
-          </div>
-        </div>
-        <div class="project-thumb">
-          <div class="thumb-empty">[ in progress ]</div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- ---------- PRODUCT & DIGITAL ---------- -->
-    <div class="project-list" id="panel-product" role="tabpanel" aria-labelledby="tab-product" hidden>
-
-      <a class="project-card" href="projects/maloka.html">
-        <div class="project-text">
-          <h3>Universo Maloka</h3>
-          <p>Visual identity and illustration for a gamified museum app. Research was conducted by the team; my contribution was UI art and illustration.</p>
-          <div class="tags">
-            <span class="tag tag-role">UI Art &amp; Illustration</span>
-            <span class="tag tag-tool">Figma</span>
-            <span class="tag">Team project</span>
-          </div>
-        </div>
-        <div class="project-thumb">
-          <img src="assets/thumbs/maloka.jpg" alt="Universo Maloka app screens" loading="lazy" decoding="async">
-          <video class="thumb-motion" muted loop playsinline preload="none"
-                 poster="assets/thumbs/maloka.jpg" aria-hidden="true">
-            <source src="assets/thumbs/maloka.webm" type="video/webm">
-            <source src="assets/thumbs/maloka.mp4" type="video/mp4">
-          </video>
-          <span class="thumb-motion-hint">Hover</span>
         </div>
       </a>
 
       <a class="project-card" href="projects/umbrella-corp.html">
-        <div class="project-text">
-          <h3>Umbrella Corp — Responsive Site</h3>
-          <p>A responsive corporate site as a conceptual exercise: how a fictional brand's tone survives across breakpoints. Functional prototype in Figma.</p>
-          <div class="tags">
-            <span class="tag tag-role">UX &amp; UI Design</span>
-            <span class="tag tag-tool">Figma</span>
-            <span class="tag">Self-directed</span>
-          </div>
-        </div>
         <div class="project-thumb">
           <img src="assets/thumbs/umbrella-corp.jpg" alt="Umbrella Corp site shown across desktop, tablet and phone" loading="lazy" decoding="async">
           <video class="thumb-motion" muted loop playsinline preload="none"
@@ -235,26 +140,100 @@
           </video>
           <span class="thumb-motion-hint">Hover</span>
         </div>
-      </a>
-
-      <a class="project-card" href="projects/necronomicon.html">
         <div class="project-text">
-          <h3>Necronomicón — TTRPG Companion App</h3>
-          <p>A companion app for tabletop role-playing: character sheets, dice and session tracking, designed around what players actually reach for mid-game.</p>
+          <h3>Umbrella Corp Web</h3>
+          <p>I created unique iconography and followed the client's visual identity in a website tailored with responsive design. The goal was to take a fictional corporation and bring it to life.</p>
           <div class="tags">
-            <span class="tag tag-role">UX &amp; UI Design</span>
+            <span class="tag tag-role">Solo Project</span>
             <span class="tag tag-tool">Figma</span>
-            <span class="tag">Self-directed</span>
+            <span class="tag tag-tool">Miro</span>
           </div>
         </div>
+      </a>
+
+      <a class="project-card" href="projects/maloka.html">
         <div class="project-thumb">
-          <img src="assets/thumbs/necronomicon.jpg" alt="Necronomicón character sheet and creature screens" loading="lazy" decoding="async">
+          <img src="assets/thumbs/maloka.jpg" alt="Universo Maloka app screens" loading="lazy" decoding="async">
           <video class="thumb-motion" muted loop playsinline preload="none"
-                 poster="assets/thumbs/necronomicon.jpg" aria-hidden="true">
-            <source src="assets/thumbs/necronomicon.webm" type="video/webm">
-            <source src="assets/thumbs/necronomicon.mp4" type="video/mp4">
+                 poster="assets/thumbs/maloka.jpg" aria-hidden="true">
+            <source src="assets/thumbs/maloka.webm" type="video/webm">
+            <source src="assets/thumbs/maloka.mp4" type="video/mp4">
           </video>
           <span class="thumb-motion-hint">Hover</span>
+        </div>
+        <div class="project-text">
+          <h3>Universo Maloka</h3>
+          <p>In this gamified map app for the interactive science and technology museum Maloka, I collaborated with UI Art and Prototypes to help families find the exhibits quicker.</p>
+          <div class="tags">
+            <span class="tag tag-role">Team Project</span>
+            <span class="tag tag-tool">Figma</span>
+            <span class="tag tag-tool">Paper prototyping</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Neuronautas: no thumbnail supplied yet. Swap the placeholder for the
+           img + video block once there is material. -->
+      <a class="project-card" href="projects/neuronautas.html">
+        <div class="project-thumb">
+          <div class="thumb-empty">[ neuronautas — poster pending ]</div>
+        </div>
+        <div class="project-text">
+          <h3>Neuronautas</h3>
+          <p>To promote appreciation for the neurodivergence spectrum, I cooperated with Paper Prototyping and UI Implementation to create this interactive arduino experience.</p>
+          <div class="tags">
+            <span class="tag tag-role">Team Project</span>
+            <span class="tag tag-tool">Figma</span>
+            <span class="tag tag-tool">Unity</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- ---------- GAME UI ---------- -->
+    <div class="project-list" id="panel-games" role="tabpanel" aria-labelledby="tab-games" hidden>
+
+      <a class="project-card" href="projects/guitar-hero-iii.html">
+        <div class="project-thumb">
+          <img src="assets/thumbs/guitar-hero-iii.jpg" alt="Redesigned Guitar Hero III main menu" loading="lazy" decoding="async">
+          <video class="thumb-motion" muted loop playsinline preload="none"
+                 poster="assets/thumbs/guitar-hero-iii.jpg" aria-hidden="true">
+            <source src="assets/thumbs/guitar-hero-iii.webm" type="video/webm">
+            <source src="assets/thumbs/guitar-hero-iii.mp4" type="video/mp4">
+          </video>
+          <span class="thumb-motion-hint">Hover</span>
+        </div>
+        <div class="project-text">
+          <h3>Guitar Hero III — UI Redesign</h3>
+          <p>For this project, I took on a challenge to improve the navigation and usability on the HUD, Pause and Main Menu screens while modernizing the iconic original style.</p>
+          <div class="tags">
+            <span class="tag tag-role">Case Study</span>
+            <span class="tag tag-tool">Figma</span>
+            <span class="tag tag-tool">GenAI Placeholders</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="project-card" href="projects/kungata.html">
+        <div class="project-thumb">
+          <img src="assets/thumbs/kungata.jpg" alt="Kungatá title sequence" loading="lazy" decoding="async">
+          <video class="thumb-motion" muted loop playsinline preload="none"
+                 poster="assets/thumbs/kungata.jpg" aria-hidden="true">
+            <source src="assets/thumbs/kungata.webm" type="video/webm">
+            <source src="assets/thumbs/kungata.mp4" type="video/mp4">
+          </video>
+          <span class="thumb-motion-hint">Hover</span>
+        </div>
+        <div class="project-text">
+          <h3>Kungatá</h3>
+          <p>In this action-based roguelike I designed game mechanics, implemented menus &amp; dynamic UI, and developed Enemy AI, dialogue systems and object interaction in Unity.</p>
+          <div class="tags">
+            <span class="tag tag-role">Team Project</span>
+            <span class="tag tag-tool">Paper prototyping</span>
+            <span class="tag tag-tool">Unity</span>
+            <span class="tag tag-tool">C#</span>
+          </div>
         </div>
       </a>
 
@@ -266,43 +245,74 @@
 <section id="about">
   <div class="wrap">
     <p class="section-label">About</p>
-    <h2 class="section-title">From breaking interfaces to building them</h2>
+    <h2 class="section-title">About me</h2>
 
     <div class="two-col">
       <div class="prose">
         <p>
-          [Two or three paragraphs, first person. Not a CV — a narrative. Where you come from,
-          what pulled you toward interface design, where you're headed. Name the specific games
-          and products that shaped your taste; that says more about your judgement than any
-          tool list.]
+          I'm based in Bogotá, Colombia, where I earned my Bachelor's degree in
+          Interaction Design.
         </p>
         <p>
-          [Second paragraph: what you're building now, and the kind of role you're looking for.]
+          I've worked professionally in game development, web building, and QA testing,
+          which sharpened how I read user and player psychology. Now, I bring that same
+          criteria and design thinking to how I design interfaces, prioritizing
+          functionality while maintaining a strong visual identity.
         </p>
 
-        <h3>What a designer who came from QA brings</h3>
-        <ul>
-          <li><strong>Edge cases surface at design time</strong>, not in the patch cycle — the state nobody specified, the flow that strands the user, the feedback that fires twice.</li>
-          <li><strong>Specifications that can actually be verified.</strong> A design nobody can test is a design nobody can validate.</li>
-          <li><strong>Severity judgement learned in production</strong> — what genuinely blocks a user versus what merely annoys them.</li>
-          <li><strong>Fluency across disciplines.</strong> QA talks to design, engineering and production every single day.</li>
-        </ul>
+        <div class="btn-row" style="margin-top:var(--s-3);">
+          <!-- Point this at assets/alejandra-uruena-resume.pdf once the file is in. -->
+          <a class="btn" href="#" download>Download Resume</a>
+        </div>
 
-        <h3>Technical capability</h3>
+        <h3>Latest focus</h3>
         <p>
-          [Short paragraph: what you can implement yourself and what you hand off. Be precise —
-          overstating here is the fastest way to lose credibility in a technical interview.]
+          I have an open mindset towards AI integration and am currently exploring best
+          practices for using it in implementation workflows for pipeline automation.
         </p>
+
+        <!-- A native disclosure: keyboard-operable and works with JS disabled. -->
+        <details class="fun-facts">
+          <summary>Click to read some fun facts!</summary>
+          <p>
+            Outside of work, I love spending my time playing the drums, gaming,
+            overanalyzing movies, and making art &amp; DIY projects.
+          </p>
+          <p>You'll usually find me in game jams!</p>
+          <p>I'm really into video editing and fanart…</p>
+        </details>
       </div>
 
-      <ul class="fact-list">
-        <li><span class="k">Focus</span><span class="v">UI/UX Technical Design</span></li>
-        <li><span class="k">Primary engine</span><span class="v">Unreal Engine — UMG</span></li>
-        <li><span class="k">Also</span><span class="v">Unity · C#</span></li>
-        <li><span class="k">Design</span><span class="v">Figma</span></li>
-        <li><span class="k">Based in</span><span class="v">Colombia</span></li>
-        <li><span class="k">Languages</span><span class="v">Spanish · English</span></li>
-      </ul>
+      <div class="skills">
+        <h3>Design skills</h3>
+        <ul class="chip-list">
+          <li>User flows</li>
+          <li>Information Architecture</li>
+          <li>Wireframing</li>
+          <li>Prototyping</li>
+          <li>UI Design Systems</li>
+          <li>UX Writing</li>
+          <li>Illustration</li>
+        </ul>
+
+        <h3>Technical range</h3>
+        <ul class="chip-list">
+          <li>Figma</li>
+          <li>Photoshop</li>
+          <li>Illustrator</li>
+          <li>Premiere Pro</li>
+          <li>Clip Studio</li>
+          <li>Blender</li>
+          <li>Jira / Trello</li>
+        </ul>
+        <ul class="chip-list">
+          <li>Unity</li>
+          <li>Unreal Engine</li>
+          <li>HTML/CSS</li>
+          <li>Webflow</li>
+          <li>WixStudio</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -311,11 +321,8 @@
 <section id="contact">
   <div class="wrap">
     <p class="section-label">Contact</p>
-    <h2 class="section-title">Let's talk</h2>
-    <p class="section-intro">
-      Open to conversations about interface design, collaborations, and UI/UX or technical
-      design roles.
-    </p>
+    <h2 class="section-title">See anything you like?</h2>
+    <p class="section-intro">Let's have a chat!</p>
     <div class="contact-links">
       <a class="btn btn-primary" href="mailto:uruenale@gmail.com">Email me</a>
       <a class="btn" href="https://www.linkedin.com/in/aleja-uruena/" target="_blank" rel="noopener">LinkedIn</a>
@@ -328,7 +335,7 @@
 
 <footer>
   <div class="wrap">
-    <span>© <span id="year">2026</span> Aleja Urueña</span>
+    <span>© <span id="year">2026</span> Alejandra Urueña</span>
     <span>Designed and built by hand</span>
   </div>
 </footer>
